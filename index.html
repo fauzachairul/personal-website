@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#3b82f6" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="#3b82f6" />
+  <meta name="msapplication-navbutton-color" content="#3b82f6" />
+  <title>Porto|Fauza</title>
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <link href="src/output.css" rel="stylesheet" />
+</head>
+
+<body class="dark:bg-[#121212] scroll-smooth overflow-x-hidden">
+  <!-- navbar -->
+  <!-- transition duration-200 gap-10 w-full items-center justify-center pt-8 md:flex md:flex-row md:pt-0 md:w-auto font-semibold text-slate-700 dark:text-gray-200 absolute top-full bg-slate-200 h-screen md:h-auto md:static md:bg-transparent dark:md:bg-transparent -->
+  <nav class="w-full fixed top-0 left-0 right-0 z-[999]">
+    <div class="container mx-auto px-[7%] py-6 lg:px-0">
+      <div class="flex justify-between items-center w-full">
+        <div class="logo text-3xl text-slate-800 dark:text-gray-100 font-bold">.Logo</div>
+        <ul id="nav-links"
+          class="absolute top-full h-[60vh] w-full bg-white dark:bg-gray-950 flex flex-col justify-around items-center -translate-y-[110%] left-0 right-0 opacity-0  transition-all duration-200 md:static md:h-auto md:bg-transparent dark:md:bg-transparent md:w-auto md:translate-y-0 md:flex-row md:opacity-100 md:gap-10 dark:text-gray-100">
+          <li><a href="#" class="nav-active font-semibold">Home</a></li>
+          <li><a href="#about" class="font-semibold">About</a></li>
+          <li><a href="#portofolio" class="font-semibold">Portfolio</a></li>
+          <li><a href="#contact" class="font-semibold">Contact</a></li>
+          <li>
+            <div
+              class="hidden md:flex flex-col justify-center ml-3 border rounded-md dark:border-slate-700 transition duration-300 active:border-2 hover:bg-gray-50 dark:hover:bg-slate-700">
+              <input type="checkbox" name="toggle" id="toggle" class="light-switch hidden" />
+              <label class="relative cursor-pointer p-2 hidden md:block" for="toggle">
+                <svg class="dark:hidden" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                  <path class="fill-slate-700"
+                    d="M7 0h2v2H7zM12.88 1.637l1.414 1.415-1.415 1.413-1.413-1.414zM14 7h2v2h-2zM12.95 14.433l-1.414-1.413 1.413-1.415 1.415 1.414zM7 14h2v2H7zM2.98 14.364l-1.413-1.415 1.414-1.414 1.414 1.415zM0 7h2v2H0zM3.05 1.706 4.463 3.12 3.05 4.535 1.636 3.12z" />
+                  <path class="fill-slate-900" d="M8 4C5.8 4 4 5.8 4 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4Z" />
+                </svg>
+                <svg class="hidden dark:block" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                  <path class="fill-slate-400"
+                    d="M6.2 1C3.2 1.8 1 4.6 1 7.9 1 11.8 4.2 15 8.1 15c3.3 0 6-2.2 6.9-5.2C9.7 11.2 4.8 6.3 6.2 1Z" />
+                  <path class="fill-slate-500"
+                    d="M12.5 5a.625.625 0 0 1-.625-.625 1.252 1.252 0 0 0-1.25-1.25.625.625 0 1 1 0-1.25 1.252 1.252 0 0 0 1.25-1.25.625.625 0 1 1 1.25 0c.001.69.56 1.249 1.25 1.25a.625.625 0 1 1 0 1.25c-.69.001-1.249.56-1.25 1.25A.625.625 0 0 1 12.5 5Z" />
+                </svg>
+                <!-- <span class="sr-only">Switch to light / dark version</span> -->
+              </label>
+            </div>
+          </li>
+        </ul>
+        <div class="md:hidden flex items-center">
+
+          <!-- toggle -->
+          <div
+            class="flex flex-col justify-center ml-3 border rounded-md dark:border-slate-700 transition duration-300 active:border-2  dark:active:bg-slate-700">
+            <input type="checkbox" name="toggle" id="toggle" class="light-switch hidden" />
+            <label class="relative cursor-pointer p-2 block md:hidden" for="toggle">
+              <svg class="dark:hidden" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                <path class="fill-slate-700"
+                  d="M7 0h2v2H7zM12.88 1.637l1.414 1.415-1.415 1.413-1.413-1.414zM14 7h2v2h-2zM12.95 14.433l-1.414-1.413 1.413-1.415 1.415 1.414zM7 14h2v2H7zM2.98 14.364l-1.413-1.415 1.414-1.414 1.414 1.415zM0 7h2v2H0zM3.05 1.706 4.463 3.12 3.05 4.535 1.636 3.12z" />
+                <path class="fill-slate-900" d="M8 4C5.8 4 4 5.8 4 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4Z" />
+              </svg>
+              <svg class="hidden dark:block" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                <path class="fill-slate-400"
+                  d="M6.2 1C3.2 1.8 1 4.6 1 7.9 1 11.8 4.2 15 8.1 15c3.3 0 6-2.2 6.9-5.2C9.7 11.2 4.8 6.3 6.2 1Z" />
+                <path class="fill-slate-500"
+                  d="M12.5 5a.625.625 0 0 1-.625-.625 1.252 1.252 0 0 0-1.25-1.25.625.625 0 1 1 0-1.25 1.252 1.252 0 0 0 1.25-1.25.625.625 0 1 1 1.25 0c.001.69.56 1.249 1.25 1.25a.625.625 0 1 1 0 1.25c-.69.001-1.249.56-1.25 1.25A.625.625 0 0 1 12.5 5Z" />
+              </svg>
+              <!-- <span class="sr-only">Switch to light / dark version</span> -->
+            </label>
+          </div>
+          <button id="burger" class="w-12 h-12 cursor-pointer flex justify-center items-center">
+            <i data-feather="menu" class="w-3/4 h-full dark:text-white"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- nav end -->
+  <!-- hero start -->
+  <section id="hero"
+    class="h-screen w-full bg-center bg-cover bg-no-repeat bg-[url('../src/asset/img/sl_072622_51930_13.jpg')] dark:bg-[url('../src/asset/img/SL-072622-51930-14.jpg')] relative bg-fixed">
+    <!-- Gradient background diatur agar berada di belakang konten -->
+    <div class="social lg:flex gap-10 flex-col absolute top-1/2 left-14 -translate-y-1/2 z-[999] hidden">
+      <a href="https://www.facebook.com/fauza.nch12" target="_blank" class="social-lg">
+        <i data-feather="facebook" class="text-gray-100 dark:text-slate-800"></i>
+      </a>
+      <a href="https://www.instagram.com/fauzachairul23" target="_blank" class="social-lg">
+        <i data-feather="instagram" class="text-gray-100 dark:text-slate-800"></i>
+      </a>
+      <a href="https://www.github.com/fauzachairul" target="_blank" class="social-lg">
+        <i data-feather="github" class="text-gray-100 dark:text-slate-800"></i>
+      </a>
+    </div>
+    <div
+      class="bg-gradient-to-b from-white/20 to-white dark:bg-gradient-to-b dark:from-[#121212]/20 dark:to-[#121212] absolute top-0 left-0 right-0 w-full h-full z-0">
+    </div>
+
+    <div class="container mx-auto h-full relative z-10"> <!-- Konten diberikan z-10 agar berada di atas gradient -->
+      <div
+        class="flex h-full justify-center items-center gap-y-10 md:flex-row md:justify-between md:gap-y-0 md:gap-x-10 px-[7%]">
+        <div class="hero-desc max-w-3xl mx-auto">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl text-slate-700 font-semibold md:mb-6 mb-4 dark:text-gray-200">
+            Hello,</h2>
+          <h2
+            class="text-4xl md:text-6xl lg:text-7xl text-slate-800 dark:text-gray-100 font-bold leading-snug text-center">
+            My <span class="bg-gradient-to-r from-yellow-300 to-yellow-500 bg-clip-text text-transparent">Name</span>
+            Is, <span class="bg-gradient-to-r from-yellow-300 to-yellow-500 bg-clip-text text-transparent">Fauza</span>
+            Chairul
+            <span class="bg-gradient-to-r from-yellow-300 to-yellow-500 bg-clip-text text-transparent">Athfal</span>
+          </h2>
+          <p
+            class="text-3xl md:text-4xl lg:text-5xl text-slate-700 font-semibold md:mt-8 mt-4 dark:text-gray-200 text-center">
+            Im A,
+            <span class="type-text text-yellow-500"></span>
+          </p>
+          <div
+            class="ctas mt-12 mx-auto flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6 transition duration-300">
+            <a href="" class="px-8 py-5 text-yellow-500 font-semibold text-2xl rounded-lg">About Me</a>
+            <a href=""
+              class="px-8 py-5 bg-yellow-500 font-semibold rounded-lg text-slate-700 transition duration-300 hover:bg-gradient-to-r from-yellow-200 to-yellow-500">Download
+              CV</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- hero end -->
+
+  <!-- about start -->
+  <section id="about" class="h-auto w-full">
+    <div class="container mx-auto w-full h-full py-28 px-8 lg:px-0">
+      <h1 class="text-4xl font-bold text-center dark:text-gray-100 mb-24">About Me</h1>
+      <div class="flex justify-center items-center h-full w-full flex-col  gap-10 lg:flex-row mb-28">
+        <div class="flex justify-center items-center lg:w-1/2">
+          <div class="w-4/5 lg:w-3/4 rounded-full group hover:scale-90 transition duration-200 shadow-xl">
+            <img src="src/asset/img/ft1.png" alt=""
+              class="w-full grayscale group-hover:scale-105 transition duration-300 group-hover:grayscale-0"
+              draggable="false">
+          </div>
+        </div>
+        <div class=" lg:w-1/2">
+          <h1 class="lg:text-4xl text-3xl text-center font-semibold text-slate-900 dark:text-gray-100 mb-8">Hi!, Saya
+            Fauza Chairul
+            Athfal
+          </h1>
+          <p class="text-base text-justify text-slate-800 dark:text-gray-100 max-w-[450px] w-full mb-4 mx-auto">Saya
+            seorang mahasiswa
+            teknik
+            informatika di sebuah
+            universitas indie yang
+            ada di kota
+            saya.</p>
+          <p class="text-base text-justify text-slate-800 dark:text-gray-100 max-w-[450px] w-full mx-auto mb-4">Saya
+            seorang
+            yang memiliki ketertarikan mendalam di bidang Web Development, Desain UI/UX, dan Fotografi.
+          </p>
+        </div>
+      </div>
+
+      <h1 class="text-4xl font-bold text-center dark:text-gray-100 mb-5">Tech Stack</h1>
+      <p class="text-base text-center mb-20 dark:text-gray-100">Beberapa technologi yang saya kuasai</p>
+
+      <div class="flex justify-center items-center gap-x-10 flex-wrap gap-10">
+        <!-- tailwindcss -->
+        <div class="basis-20 p-5 bg-gradient-to-b from-slate-200 to-gray-200 rounded-md shadow-lg group relative">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="80" height="80" viewBox="0 0 48 48">
+            <path
+              d="M24,9.604c-6.4,0-10.4,3.199-12,9.597c2.4-3.199,5.2-4.398,8.4-3.599 c1.826,0.456,3.131,1.781,4.576,3.247C27.328,21.236,30.051,24,36,24c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.6 c-1.825-0.456-3.13-1.781-4.575-3.247C32.672,12.367,29.948,9.604,24,9.604L24,9.604z M12,24c-6.4,0-10.4,3.199-12,9.598 c2.4-3.199,5.2-4.399,8.4-3.599c1.825,0.457,3.13,1.781,4.575,3.246c2.353,2.388,5.077,5.152,11.025,5.152 c6.4,0,10.4-3.199,12-9.598c-2.4,3.199-5.2,4.399-8.4,3.599c-1.826-0.456-3.131-1.781-4.576-3.246C20.672,26.764,17.949,24,12,24 L12,24z"
+              class="fill-[#00acc1] transition duration-300 grayscale group-hover:grayscale-0">
+            </path>
+          </svg>
+          <!-- Keterangan Ribbon -->
+          <span
+            class="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-white bg-teal-500 text-xs px-2 py-1 rounded-t-md opacity-0 group-hover:opacity-100 transition-all duration-300 w-full text-center">Tailwind
+            CSS</span>
+        </div>
+
+        <!-- HTML -->
+        <div class="basis-20 p-5 bg-gradient-to-b from-slate-200 to-gray-200 rounded-md shadow-lg group relative">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="80" height="80" viewBox="0 0 30 30">
+            <path
+              d="M25.428,3.333C25.238,3.121,24.967,3,24.683,3H5.317C5.033,3,4.762,3.121,4.572,3.333c-0.19,0.212-0.28,0.495-0.249,0.777 l2.202,19.823c0.044,0.403,0.329,0.74,0.719,0.851l7.48,2.137c0.09,0.026,0.183,0.039,0.275,0.039s0.185-0.013,0.275-0.039 l7.48-2.137c0.39-0.111,0.674-0.448,0.719-0.851L25.676,4.11C25.708,3.828,25.618,3.545,25.428,3.333z M20.629,10.43h-8.93 l0.212,2.542h8.503l-0.638,7.51L15.003,22l-0.047-0.015l-4.72-1.505L9.978,17.42h2.312l0.101,1.189l2.637,0.581l2.591-0.582 l0.275-3.213h-8.09L9.178,8h11.659L20.629,10.43z"
+              class="fill-orange-500 grayscale transition duration-300 group-hover:grayscale-0">
+            </path>
+          </svg>
+          <!-- Keterangan Ribbon -->
+          <span
+            class="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-white bg-orange-500 text-xs px-2 py-1 rounded-t-md opacity-0 group-hover:opacity-100 transition-all duration-300 w-full text-center">HTML</span>
+        </div>
+
+        <!-- CSS -->
+        <div class="basis-20 p-5 bg-gradient-to-b from-slate-200 to-gray-200 rounded-md shadow-lg group relative">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="80" height="80" viewBox="0 0 30 30">
+            <path
+              d="M25.428,3.333C25.238,3.121,24.967,3,24.683,3H5.317C5.033,3,4.762,3.121,4.572,3.333c-0.19,0.212-0.28,0.495-0.249,0.777 l2.202,19.823c0.044,0.403,0.329,0.74,0.719,0.851l7.48,2.137c0.09,0.026,0.183,0.039,0.275,0.039s0.185-0.013,0.275-0.039 l7.48-2.137c0.39-0.111,0.674-0.448,0.719-0.851L25.676,4.11C25.708,3.828,25.618,3.545,25.428,3.333z M20.516,13.074l-0.446,7.285 l-5.038,1.647l-5.038-1.647l-0.191-3.484h2.55l0.064,1.584l2.615,0.887l2.615-0.887l0.191-2.85h-5.612l-0.127-2.534h5.867 l0.191-2.534H9.356L9.165,8.006h11.67L20.516,13.074z"
+              class="fill-blue-500 grayscale transition duration-300 group-hover:grayscale-0">
+            </path>
+          </svg>
+          <!-- Keterangan Ribbon -->
+          <span
+            class="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-white bg-blue-500 text-xs px-2 py-1 rounded-t-md opacity-0 group-hover:opacity-100 transition-all duration-300 w-full text-center">CSS</span>
+        </div>
+
+        <!-- JS -->
+        <div class="basis-20 p-5 bg-gradient-to-b from-slate-200 to-gray-200 rounded-md shadow-lg group relative">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="80" height="80" viewBox="0 0 30 30">
+            <path
+              d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18c1.105,0,2-0.895,2-2V6C26,4.895,25.105,4,24,4z M15,20.38 c0,1.777-1.09,2.773-2.9,2.773c-1.788,0-2.927-1.045-2.927-2.735h1.937c0.005,0.627,0.379,1.023,0.957,1.023 c0.594,0,0.913-0.374,0.913-1.078v-5.365H15V20.38z M20.481,23.153c-2.009,0-3.273-0.946-3.307-2.476H19.1 c0.049,0.578,0.626,0.946,1.463,0.946c0.754,0,1.272-0.363,1.272-0.886c0-0.44-0.347-0.677-1.255-0.858l-1.045-0.209 c-1.453-0.275-2.201-1.067-2.201-2.316c0-1.552,1.244-2.57,3.158-2.57c1.86,0,3.147,1.007,3.18,2.476h-1.865 c-0.044-0.561-0.578-0.952-1.289-0.952c-0.709,0-1.176,0.336-1.176,0.864c0,0.435,0.352,0.688,1.188,0.853l1.022,0.198 c1.569,0.303,2.273,1.012,2.273,2.272C23.826,22.152,22.561,23.153,20.481,23.153z"
+              class="fill-yellow-400 grayscale transition duration-300 group-hover:grayscale-0">
+            </path>
+          </svg>
+          <!-- Keterangan Ribbon -->
+          <span
+            class="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-white bg-yellow-400 text-xs px-2 py-1 rounded-t-md opacity-0 group-hover:opacity-100 transition-all duration-300 w-full text-center">Java
+            Script</span>
+        </div>
+
+        <!-- PHP -->
+
+        <div class="basis-20 p-5 bg-gradient-to-b from-slate-200 to-gray-200 rounded-md shadow-lg group relative">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="80" height="80" viewBox="0 0 50 50">
+            <path
+              d="M 25 12 C 11.542969 12 1 17.710938 1 25 C 1 32.289063 11.542969 38 25 38 C 38.457031 38 49 32.289063 49 25 C 49 17.710938 38.457031 12 25 12 Z M 22.507813 16 L 25.128906 16 L 24.296875 20 L 26.636719 20 C 28.121094 20 29.117188 20.207031 29.683594 20.726563 C 30.238281 21.238281 30.40625 22.078125 30.183594 23.222656 L 29.144531 28 L 26.480469 28 L 27.4375 23.582031 C 27.554688 22.976563 27.507813 22.554688 27.304688 22.332031 C 27.101563 22.109375 26.65625 22 25.988281 22 L 23.890625 22 L 22.625 28 L 20 28 Z M 11 20 L 16.332031 20 C 18.875 20 20.414063 21.703125 19.8125 24.246094 C 19.113281 27.199219 17.238281 28 13.792969 28 L 12.144531 28 L 11.621094 31 L 8.972656 31 Z M 32 20 L 37.332031 20 C 39.875 20 41.414063 21.703125 40.8125 24.246094 C 40.113281 27.199219 38.238281 28 34.792969 28 L 33.144531 28 L 32.621094 31 L 29.972656 31 Z M 13.269531 22 L 12.515625 26 L 14.226563 26 C 15.707031 26 17.082031 25.832031 17.3125 23.625 C 17.398438 22.769531 17.042969 22 15.332031 22 Z M 34.269531 22 L 33.515625 26 L 35.226563 26 C 36.707031 26 38.082031 25.832031 38.3125 23.625 C 38.398438 22.769531 38.042969 22 36.332031 22 Z"
+              class="fill-[#8B75A1] grayscale transition duration-300 group-hover:grayscale-0">
+            </path>
+          </svg>
+          <!-- Keterangan Ribbon -->
+          <span
+            class="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-white bg-[#8B75A1] text-xs px-2 py-1 rounded-t-md opacity-0 group-hover:opacity-100 transition-all duration-300 w-full text-center">PHP</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- about end -->
+
+  <!-- porto -->
+  <section id="portofolio" class="h-auto">
+    <div class="container mx-auto py-28 px-8 lg:px-0">
+      <h1 class="text-3xl text-center font-bold mb-20 dark:text-gray-100"> MY Portofolio </h1>
+      <div class="filter_button w-full flex justify-center items-center gap-4 mb-10 flex-wrap">
+        <button data-name="all"
+          class="active px-8 py-5 border rounded-md text-base font-semibold shadow-md hover:-translate-x-2 hover:-translate-y-2 transition-all duration-150 hover:shadow-2xl active:translate-x-0 active:translate-y-0 active:shadow-inherit bg-gray-100">All</button>
+        <button data-name="website"
+          class="px-8 py-5 border rounded-md text-base font-semibold shadow-md hover:-translate-x-2 hover:-translate-y-2 transition-all duration-150 hover:shadow-2xl active:translate-x-0 active:translate-y-0 active:shadow-inherit bg-gray-100">Website</button>
+        <button data-name="ui/ux"
+          class="px-8 py-5 border rounded-md text-base font-semibold shadow-md hover:-translate-x-2 hover:-translate-y-2 transition-all duration-150 hover:shadow-2xl active:translate-x-0 active:translate-y-0 active:shadow-inherit bg-gray-100">UI/UX</button>
+      </div>
+
+      <div class="filter_cards flex flex-wrap gap-x-20 justify-center items-center">
+
+        <div class="card" data-name="website">
+          <div
+            class="relative h-56 m-2.5 overflow-hidden text-white rounded-md group hover:scale-95 transition duration-150">
+            <img src="src/asset/img/Screenshot 2024-07-25 165734.png" alt="card-image"
+              class="group-hover:scale-105 transition duration-150 w-ful h-full" />
+          </div>
+          <div class="p-4">
+            <h6 class="mb-2 text-slate-800 text-xl font-semibold dark:text-gray-100">
+              Kopi Senja
+            </h6>
+            <p class="description line-clamp-2 text-slate-600 leading-normal font-light dark:text-gray-100">
+              Website Ini dibuat saat saya sedang berlatih css dasar,, Lorem ipsum dolor sit amet consectetur,
+              adipisicing elit. Reprehenderit, quidem!
+            </p>
+
+            <a href="#" class="read-more text-blue-700">Baca Selengkapnya</a>
+          </div>
+          <div class="px-4 pb-4 pt-0 mt-2 flex justify-center">
+            <a href="#" target="_blank"
+              class="rounded-md mr-4 bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none w-1/2 font-semibold">
+              view
+            </a>
+            <a href="#" target="_blank"
+              class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none w-1/2 font-semibold">
+              view Repos
+            </a>
+          </div>
+        </div>
+
+        <div class="card" data-name="website">
+          <div
+            class="relative h-56 m-2.5 overflow-hidden text-white rounded-md group hover:scale-95 transition duration-150">
+            <img src="src/asset/img/Screenshot 2024-07-25 170249.png" alt="card-image"
+              class="group-hover:scale-105 transition duration-150 w-ful h-full" />
+          </div>
+          <div class="p-4">
+            <h6 class="mb-2 text-slate-800 text-xl font-semibold dark:text-gray-100">
+              Explore The World
+            </h6>
+            <p class="description text-slate-600 line-clamp-2 leading-normal font-light dark:text-gray-100">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, omnis. Unde nam repudiandae autem dicta sit
+              libero quidem atque, laudantium voluptas quibusdam nesciunt quas. Asperiores.
+            </p>
+
+            <a href="#" class="read-more text-blue-700">Baca Selengkapnya</a>
+          </div>
+          <div class="px-4 pb-4 pt-0 mt-2 flex justify-center">
+            <a href="#" target="_blank"
+              class="rounded-md mr-4 bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none w-1/2 font-semibold">
+              view
+            </a>
+            <a href="#" target="_blank"
+              class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none w-1/2 font-semibold">
+              view Repos
+            </a>
+          </div>
+        </div>
+
+        <div class="card" data-name="website">
+          <div
+            class="relative h-56 m-2.5 overflow-hidden text-white rounded-md group hover:scale-95 transition duration-150">
+            <img src="src/asset/img/Screenshot 2024-07-25 171638.png" alt="card-image"
+              class="group-hover:scale-105 transition duration-150 w-ful h-full" />
+          </div>
+          <div class="p-4">
+            <h6 class="mb-2 text-slate-800 text-xl font-semibold dark:text-gray-100">
+              DigiMart
+            </h6>
+            <p class="description text-slate-600 leading-normal line-clamp-2 font-light dark:text-gray-100">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, omnis. Unde nam repudiandae autem dicta sit
+              libero quidem atque, laudantium voluptas quibusdam nesciunt quas. Asperiores.
+            </p>
+
+            <a href="#" class="read-more text-blue-700">Baca Selengkapnya</a>
+          </div>
+          <div class="px-4 pb-4 pt-0 mt-2 flex justify-center">
+            <a href="#" target="_blank"
+              class="rounded-md mr-4 bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none w-1/2 font-semibold">
+              view
+            </a>
+            <a href="#" target="_blank"
+              class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none w-1/2 font-semibold">
+              view Repos
+            </a>
+          </div>
+        </div>
+
+        <div class="card" data-name="website">
+          <div
+            class="relative h-56 m-2.5 overflow-hidden text-white rounded-md group hover:scale-95 transition duration-150">
+            <img src="src/asset/img/image copy.png" alt="card-image"
+              class="group-hover:scale-105 transition duration-150 w-ful h-full" />
+          </div>
+          <div class="p-4">
+            <h6 class="mb-2 text-slate-800 text-xl font-semibold dark:text-gray-100">
+              Penitipan Snack
+            </h6>
+            <p class="description text-slate-600 leading-normal line-clamp-2 font-light dark:text-gray-100">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, omnis. Unde nam repudiandae autem dicta sit
+              libero quidem atque, laudantium voluptas quibusdam nesciunt quas. Asperiores.
+            </p>
+
+            <a href="#" class="read-more text-blue-700">Baca Selengkapnya</a>
+          </div>
+          <div class="px-4 pb-4 pt-0 mt-2 flex justify-center">
+            <a href="#" target="_blank"
+              class="rounded-md mr-4 bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none w-1/2 font-semibold">
+              view
+            </a>
+            <a href="#" target="_blank"
+              class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none w-1/2 font-semibold">
+              view Repos
+            </a>
+          </div>
+        </div>
+
+        <div class="card" data-name="ui/ux">
+          <div
+            class="relative h-56 m-2.5 overflow-hidden text-white rounded-md group hover:scale-95 transition duration-150">
+            <img src="src/asset/img/ui-ux.png" alt="card-image"
+              class="group-hover:scale-105 transition duration-150 w-full h-full" />
+          </div>
+          <div class="p-4">
+            <h6 class="mb-2 text-slate-800 text-xl font-semibold dark:text-gray-100">
+              Proto Website UphillRent
+            </h6>
+            <p class="description text-slate-600 leading-normal line-clamp-2 font-light dark:text-gray-100">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, omnis. Unde nam repudiandae autem dicta sit
+              libero quidem atque, laudantium voluptas quibusdam nesciunt quas. Asperiores.
+            </p>
+            <a href="#" class="read-more text-blue-700">Baca Selengkapnya</a>
+          </div>
+          <div class="px-4 pb-4 pt-0 mt-2 flex justify-center">
+            <a href="https://www.figma.com/proto/YO2S2i5iDot2gkY3znDFMB/Rental-Peralatan-Pendakian?node-id=241-122&t=uvNEIF6D65HqvpMd-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=8%3A8&show-proto-sidebar=1"
+              target="_blank"
+              class="rounded-md mr-4 bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none w-1/2 font-semibold">
+              view
+            </a>
+            <a href="#" target="_blank"
+              class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none w-1/2 font-semibold">
+              view Repos
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  <!-- end -->
+
+  <!-- contact -->
+  <section id="contact" class="pt-24 pb-24 overflow-hidden">
+    <div class="container px-8 lg:px-0 h-full mx-auto w-full">
+      <h2 class="text-center text-3xl mb-20 font-bold dark:text-gray-100">Contact ME</h2>
+      <div class="flex w-full flex-col-reverse lg:flex-row justify-between items-center h-full gap-5 lg:gap-0">
+        <div class="w-full lg:w-1/2 h-full overflow-hidden rounded-md group">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d247.26887688908943!2d109.9082468479274!3d-7.431791767338745!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1729996783527!5m2!1sid!2sid"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            class="h-[300px] lg:h-[550px] w-full group-hover:scale-105 transition duration-100"></iframe>
+        </div>
+        <div class="w-full lg:w-1/2 px-5" data-aos="fade-left">
+          <form name="submit-to-google-sheet">
+            <div class="mb-3">
+              <label for="name">
+                <span
+                  class="block after:content-['*'] after:text-red-600 after:ml-1 mb-2 dark:text-gray-100">Name</span>
+                <input type="text" id="name" name="nama"
+                  class="py-2 px-3 text-slate-900 w-full rounded-md ring border ring-blue-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-200"
+                  placeholder="please enter your name" required autocomplete="off">
+              </label>
+            </div>
+
+            <div class="mb-3">
+
+              <label for="email">
+                <span
+                  class="block after:content-['*'] after:text-red-600 after:ml-1 mb-2 dark:text-gray-100">Email</span>
+                <input type="email" id="email" name="email"
+                  class="py-2 px-3 text-slate-900 w-full rounded-md ring border ring-blue-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 invalid:text-red-700 invalid:focus:ring-red-600  invalid:focus:border-red-600 peer dark:bg-slate-200"
+                  placeholder="please enter your email" required autocomplete="off">
+              </label>
+            </div>
+            <div class="mb-3">
+              <label for="subject">
+                <span
+                  class="block after:content-['*'] after:text-red-600 after:ml-1 mb-2 dark:text-gray-100">Subject</span>
+                <input type="text" id="subject" name="subject"
+                  class="py-2 px-3 text-slate-900 w-full rounded-md ring border ring-blue-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-200"
+                  placeholder="please enter your Subject" required autocomplete="off">
+              </label>
+              <div class="mb-3">
+              </div>
+
+              <label for="message">
+                <span
+                  class="block after:content-['*'] after:text-red-600 after:ml-1 mb-2 dark:text-gray-100">Message</span>
+                <textarea name="pesan" id="message"
+                  class="w-full h-52 text-gray-800 rounded-md px-4 ring border ring-blue-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-200"></textarea>
+              </label>
+
+              <button type="submit"
+                class="btn-kirim w-full  py-3 px-5 bg-yellow-400 rounded-md mt-5 text-slate-900">Send
+                Me</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end -->
+
+  <!-- footer start -->
+  <footer class="bg-gray-100  dark:bg-slate-700">
+    <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8 text-center">
+      <div class="text-center text-yellow-500 dark:text-yellow-400 text-4xl font-bold">
+        Fauza Chairul
+      </div>
+
+      <p class="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-700 dark:text-gray-200">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt consequuntur amet culpa cum
+        itaque neque.
+      </p>
+
+      <ul class="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
+        <li>
+          <a class=" text-gray-700 hover:text-gray-700/75 dark:text-gray-300 transition dark:hover:text-gray-300/70"
+            href="#home"> Home </a>
+        </li>
+
+        <li>
+          <a class=" text-gray-700 hover:text-gray-700/75 dark:text-gray-300 transition dark:hover:text-gray-300/70"
+            href="#about"> About </a>
+        </li>
+
+        <li>
+          <a class=" text-gray-700 hover:text-gray-700/75 dark:text-gray-300 transition dark:hover:text-gray-300/70"
+            href="#port"> Porto </a>
+        </li>
+
+        <li>
+          <a class=" text-gray-700 hover:text-gray-700/75 dark:text-gray-300 transition dark:hover:text-gray-300/70"
+            href="#contact"> Contact </a>
+        </li>
+      </ul>
+
+      <ul class="mt-12 flex justify-center gap-6 md:gap-8">
+        <li>
+          <a href="#" rel="noreferrer" target="_blank"
+            class="dark:text-gray-300 transition dark:hover:text-gray-300/70 text-gray-700 hover:text-gray-700/75">
+            <span class="sr-only">Facebook</span>
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                clip-rule="evenodd" />
+            </svg>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" rel="noreferrer" target="_blank"
+            class="dark:text-gray-300 transition dark:hover:text-gray-300/70 text-gray-700 hover:text-gray-700/75">
+            <span class="sr-only">Instagram</span>
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                clip-rule="evenodd" />
+            </svg>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" rel="noreferrer" target="_blank"
+            class="dark:text-gray-300 transition dark:hover:text-gray-300/70 text-gray-700 hover:text-gray-700/75">
+            <span class="sr-only">Twitter</span>
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+            </svg>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" rel="noreferrer" target="_blank"
+            class="dark:text-gray-300 transition dark:hover:text-gray-300/70 text-gray-700 hover:text-gray-700/75">
+            <span class="sr-only">GitHub</span>
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                clip-rule="evenodd" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <hr class="my-10">
+      <div class="text-xs">
+        Copyright &copy;
+        <script type="text/javascript">
+          new Date().getFullYear() > 2016 && document.write(new Date().getFullYear());
+        </script>, Made With❤️ By Fauza
+      </div>
+    </div>
+  </footer>
+  <!-- footer end -->
+
+  <script src="src/asset/js/script.js"></script>
+  <!-- typed.js -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed('.type-text', {
+      strings: ['Junior Web Dev', 'Student', 'Coding Enthusiast'],
+      typeSpeed: 80,
+      backSpeed: 80,
+      loop: true,
+    });
+
+    feather.replace();
+  </script>
+</body>
+
+</html>

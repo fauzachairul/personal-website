@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+nav.nav-scroll {
+  @apply bg-white/80 dark:bg-[#121212]/80 backdrop-blur-sm border-b;
+}
+
+#nav-links.links-scroll {
+  @apply bg-transparent;
+}
+
+.social-lg {
+  @apply w-16 h-16 bg-gradient-to-br from-zinc-700 to-slate-900 dark:bg-gradient-to-br dark:from-slate-50 dark:to-gray-300 rounded-full flex justify-center items-center hover:bg-gradient-to-br hover:from-yellow-300 hover:to-yellow-500 transition-all duration-300;
+}
+
+.active {
+  @apply bg-yellow-400;
+}
+
+.card {
+  @apply relative flex flex-col my-6 bg-white shadow-lg border border-slate-200 rounded-lg w-96 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-2xl transition-all duration-150 dark:bg-gradient-to-bl dark:from-neutral-900 dark:to-zinc-800 dark:border-slate-600;
+}
+
+.card.hide {
+  display: none;
+}
+
+.tech {
+  @apply p-2 rounded-md bg-slate-200 dark:bg-slate-700 shadow-lg;
+}
+
+.show-links{
+  @apply translate-y-0 opacity-100;
+}
