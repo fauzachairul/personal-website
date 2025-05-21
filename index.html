@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#3b82f6" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="#3b82f6" />
-  <meta name="msapplication-navbutton-color" content="#3b82f6" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff" />
+  <meta name="msapplication-navbutton-color" content="#ffffff" />
   <title>Porto|Fauza</title>
   <script src="https://unpkg.com/feather-icons"></script>
 
@@ -15,7 +15,6 @@
 
 <body class="dark:bg-[#121212] scroll-smooth overflow-x-hidden">
   <!-- navbar -->
-  <!-- transition duration-200 gap-10 w-full items-center justify-center pt-8 md:flex md:flex-row md:pt-0 md:w-auto font-semibold text-slate-700 dark:text-gray-200 absolute top-full bg-slate-200 h-screen md:h-auto md:static md:bg-transparent dark:md:bg-transparent -->
   <nav class="w-full fixed top-0 left-0 right-0 z-[999]">
     <div class="container mx-auto px-[7%] py-6 lg:px-8">
       <div class="flex justify-between items-center w-full">
@@ -68,9 +67,11 @@
               <!-- <span class="sr-only">Switch to light / dark version</span> -->
             </label>
           </div>
-          <button id="burger" class="w-12 h-12 cursor-pointer flex justify-center items-center">
-            <i data-feather="menu" class="w-3/4 h-full dark:text-white"></i>
-          </button>
+          <div id="burger">
+            <button class="w-12 h-12 cursor-pointer flex justify-center items-center">
+              <i data-feather="menu" class="w-3/4 h-full dark:text-white"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -80,7 +81,7 @@
   <section id="hero"
     class="h-screen w-full bg-center bg-cover bg-no-repeat bg-[url('../src/asset/img/sl_072622_51930_13.jpg')] dark:bg-[url('../src/asset/img/SL-072622-51930-14.jpg')] relative bg-fixed">
     <!-- Gradient background diatur agar berada di belakang konten -->
-    <div class="social lg:flex gap-10 flex-col absolute top-1/2 left-14 -translate-y-1/2 z-[999] hidden">
+    <div class="social lg:flex gap-10 flex-col absolute top-1/2 left-14 -translate-y-1/2 z-[10] hidden">
       <a href="https://www.facebook.com/fauza.nch12" target="_blank" class="social-lg">
         <i data-feather="facebook" class="text-gray-100 dark:text-slate-800"></i>
       </a>
@@ -145,8 +146,7 @@
             Athfal
           </h1>
           <p class="text-base text-justify text-slate-800 dark:text-gray-100 max-w-[450px] w-full mb-4 mx-auto">Saya
-            seorang mahasiswa
-            teknik
+            adalah mahasiswa prodi teknik
             informatika di sebuah
             universitas indie yang
             ada di kota
@@ -229,6 +229,14 @@
           <span
             class="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-white bg-[#8B75A1] text-xs px-2 py-1 rounded-t-md opacity-0 group-hover:opacity-100 transition-all duration-300 w-full text-center">PHP</span>
         </div>
+
+        <!-- laravel -->
+        <div class="basis-20 p-5 bg-gradient-to-b from-slate-200 to-gray-200 rounded-md shadow-lg group relative">
+          <img src="src/asset/img/laravel-svgrepo-com (1).svg" alt="" class="min-w-[80px] grayscale hover:grayscale-0">
+          <!-- Keterangan Ribbon -->
+          <span
+            class="absolute bottom-0 left-1/2 transform -translate-x-1/2 text-white bg-red-600 text-xs px-2 py-1 rounded-t-md opacity-0 group-hover:opacity-100 transition-all duration-300 w-full text-center">Laravel</span>
+        </div>
       </div>
 
     </div>
@@ -248,7 +256,8 @@
           class="px-8 py-5 border rounded-md text-base font-semibold shadow-md hover:-translate-x-2 hover:-translate-y-2 transition-all duration-150 hover:shadow-2xl active:translate-x-0 active:translate-y-0 active:shadow-inherit bg-gray-100">UI/UX</button>
       </div>
 
-      <div class="filter_cards flex flex-wrap gap-x-20 justify-center items-center">
+      <div
+        class="filter_cards grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 place-items-center items-center gap-10 mx-auto">
 
         <div class="card" data-name="website">
           <div
@@ -405,6 +414,13 @@
   <section id="contact" class="pt-24 pb-24 overflow-hidden">
     <div class="container px-8 lg:px-0 h-full mx-auto w-full">
       <h2 class="text-center text-3xl mb-20 font-bold dark:text-gray-100">Contact ME</h2>
+      <p class="max-w-4xl text-2xl font-semibold mx-auto text-center mb-16 text-slate-800">Jika Anda Berminat
+        Menggunakan
+        Jasa
+        Saya, Jangan
+        Sungkan Untuk
+        Menghubungi saya dengan mengisi form dibawah
+        ini!!</p>
       <div class="flex w-full flex-col-reverse lg:flex-row justify-between items-center h-full gap-5 lg:gap-0">
         <div class="w-full lg:w-1/2 h-full overflow-hidden rounded-md group">
           <iframe
