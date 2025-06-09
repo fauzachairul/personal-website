@@ -256,8 +256,7 @@
           class="px-8 py-5 border rounded-md text-base font-semibold shadow-md hover:-translate-x-2 hover:-translate-y-2 transition-all duration-150 hover:shadow-2xl active:translate-x-0 active:translate-y-0 active:shadow-inherit bg-gray-100">UI/UX</button>
       </div>
 
-      <div
-        class="filter_cards grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-items-center items-center gap-x-10 mx-auto">
+      <div class="filter_cards flex flex-wrap gap-10 justify-center items-center">
 
         <div class="card sm:max-w-md md:max-w-none" data-name="website">
           <div
@@ -403,6 +402,34 @@
             </a>
           </div>
         </div>
+        <div class="card sm:max-w-md md:max-w-none" data-name="ui/ux">
+          <div
+            class="relative h-56 m-2.5 overflow-hidden text-white rounded-md group hover:scale-95 transition duration-150">
+            <img src="src/asset/img/uiux2.png" alt="card-image"
+              class="group-hover:scale-105 transition duration-150 w-full h-full" />
+          </div>
+          <div class="p-4">
+            <h6 class="mb-2 text-slate-800 text-xl font-semibold dark:text-gray-100 line-clamp-1">
+              Prototype Website SI Manajemen Stok dan Distribusi Produk
+            </h6>
+            <p class="description text-slate-600 leading-normal line-clamp-2 font-light dark:text-gray-100">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, omnis. Unde nam repudiandae autem dicta sit
+              libero quidem atque, laudantium voluptas quibusdam nesciunt quas. Asperiores.
+            </p>
+            <a href="#" class="read-more text-blue-700">Baca Selengkapnya</a>
+          </div>
+          <div class="px-4 pb-4 pt-0 mt-2 flex justify-center">
+            <a href="https://www.figma.com/proto/YO2S2i5iDot2gkY3znDFMB/Rental-Peralatan-Pendakian?node-id=241-122&t=uvNEIF6D65HqvpMd-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=8%3A8&show-proto-sidebar=1"
+              target="_blank"
+              class="rounded-md mr-4 bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none w-1/2 font-semibold">
+              view
+            </a>
+            <a href="#" target="_blank"
+              class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none w-1/2 font-semibold">
+              view Repos
+            </a>
+          </div>
+        </div>
 
       </div>
 
@@ -430,12 +457,12 @@
             class="h-[300px] lg:h-[550px] w-full group-hover:scale-105 transition duration-100"></iframe>
         </div>
         <div class="w-full lg:w-1/2 px-5" data-aos="fade-left">
-          <form name="submit-to-google-sheet">
+          <form onsubmit="sendMessage()">
             <div class="mb-3">
               <label for="name">
                 <span
                   class="block after:content-['*'] after:text-red-600 after:ml-1 mb-2 dark:text-gray-100">Name</span>
-                <input type="text" id="name" name="nama"
+                <input type="text" id="name" name="name"
                   class="py-2 px-3 text-slate-900 w-full rounded-md ring border ring-blue-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-200"
                   placeholder="please enter your name" required autocomplete="off">
               </label>
@@ -452,20 +479,10 @@
               </label>
             </div>
             <div class="mb-3">
-              <label for="subject">
-                <span
-                  class="block after:content-['*'] after:text-red-600 after:ml-1 mb-2 dark:text-gray-100">Subject</span>
-                <input type="text" id="subject" name="subject"
-                  class="py-2 px-3 text-slate-900 w-full rounded-md ring border ring-blue-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-200"
-                  placeholder="please enter your Subject" required autocomplete="off">
-              </label>
-              <div class="mb-3">
-              </div>
-
-              <label for="message">
+              <label for="pesan">
                 <span
                   class="block after:content-['*'] after:text-red-600 after:ml-1 mb-2 dark:text-gray-100">Message</span>
-                <textarea name="pesan" id="message"
+                <textarea name="pesan" id="pesan"
                   class="w-full h-52 text-gray-800 rounded-md px-4 ring border ring-blue-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-200"></textarea>
               </label>
 

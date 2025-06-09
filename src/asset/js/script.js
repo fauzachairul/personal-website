@@ -99,3 +99,13 @@ readMoreButtons.forEach(button => {
   });
 });
 
+
+function sendMessage() {
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const pesan = document.getElementById('pesan').value;
+
+  const url = "https://api.whatsapp.com/send?phone=6285257170604&text=Hi%20Fauza%F0%9F%91%8B%F0%9F%91%8B!!%0A%0ASaya%20*" + name + "*%0AEmail%20saya%20*" + email + "*%0A%0A*" + pesan + "*";
+
+  window.open(url);
+}
